@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.header {
+  height: 90px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include m.tab{
+    padding: 0 20px;
+  }
+}
+
+.header__logo {
+  width: 147px;
+}
+
+.header__items {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include m.tab{
+    display: none;
+  }
+}
+
+.header__item {
+  &:not(:last-of-type) {
+    margin-right: 40px;
+  }
+
+  a{
+    color: v.$text-color;
+  }
+}

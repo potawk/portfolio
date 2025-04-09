@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.section-title{
+	font-size: 3.2rem;
+	font-weight: bold;
+	line-height: 1.19;
+	text-align: center;
+}
+
+.section-title__inner{
+	border-bottom: 3px solid v.$text-color;
+	color: v.$text-color;
+}
+
+.button{
+	font-weight: bold;
+	font-size: 1.6rem;
+	display: inline-block;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid v.$main-color;
+	margin: auto;
+	transition: all 0.3s;
+	background: #fff;
+	color: v.$main-color;
+
+	@include m.tab{
+		width: 100%;
+	}
+	
+	&:hover{
+		background: v.$main-color;
+		color: #fff;
+	}
+}

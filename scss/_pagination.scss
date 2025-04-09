@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.pagination{
+	margin-bottom: 56px;
+}
+
+.nav-links{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+
+	.page-numbers{
+		font-size: 3.2rem;
+		font-weight: bold;
+		height: 60px;
+		width: 60px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid v.$main-color;
+		background: #fff;
+		color: v.$main-color;
+
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+
+	.current{
+		color: #fff;
+		background: v.$main-color;
+		margin-right: 20px;
+	}
+
+	.next, .prev{
+		width: 100px;
+	}
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.contact{
+
+}
+
+.contact__text{
+	text-align: center;
+	font-size: 1.6rem;
+	margin-bottom: 56px;
+	color: v.$text-color;
+}
+
+.contact-page__text{
+	font-size: 2rem;
+	margin-bottom: 80px;
+	line-height: 1.75;
+	color: v.$text-color;
+
+	@include m.tab{
+		margin-bottom: 40px;
+	}
+}
+
+.cf7-label{
+	font-size: 2rem;
+	margin-bottom: 30px;
+	color: v.$text-color;
+
+	@include m.tab{
+		margin-bottom: 16px;
+	}
+}
+
+.cf7-input{
+	width: 100%;
+	height: 80px;
+	border: 3px solid v.$text-color;
+	margin-bottom: 80px;
+
+	@include m.tab{
+		height: 72px;
+		margin-bottom: 40px;
+	}
+}
+
+.cf7-textarea{
+	width: 100%;
+	height: 260px;
+	border: 3px solid v.$text-color;
+	margin-bottom: 80px;
+
+	@include m.tab{
+		height: 480px;
+		margin-bottom: 40px;
+	}
+}
+
+.wpcf7 input[type="submit"], .wpcf7-previous{
+	font-weight: bold;
+	font-size: 1.6rem;
+	display: inline-block;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid v.$main-color;
+	margin: auto;
+	transition: all 0.3s;
+	background: #fff;
+	color: v.$main-color;
+
+	@include m.tab{
+		width: 100%;
+	}
+	
+	&:hover{
+		background: v.$main-color;
+		color: #fff;
+	}
+}
+
+.wpcf7-previous{
+	margin-right: 30px;
+
+	@include m.tab{
+		margin-right: 0;
+	}
+}
+
+.confirm-button p{
+	display: flex;
+	justify-content: space-between;
+
+	@include m.tab{
+		display: block;
+	}
+}
+
+.wpcf7-spinner{
+	display: none;
+}
+
+.wpcf7-text,
+.wpcf7-email,
+.wpcf7-textarea,
+.cf7-input p,
+.cf7-textarea p
+{
+	font-size: 2rem;
+	padding: 10px;
+}

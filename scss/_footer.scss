@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.footer {
+  background: #333;
+  padding-top: 87.5px;
+  padding-bottom: 73px;
+	width: 100%;
+
+  @include m.tab{
+    padding: 40px 20px;
+  }
+}
+
+.footer__items {
+  display: flex;
+  justify-content: center;
+
+  @include m.tab{
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer__item {
+	a{
+		color: #fff;
+    font-size: 1.4rem;
+	}
+
+  &:not(:last-of-type) {
+    margin-right: 116px;
+
+    @include m.tab{
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+	color: #fff;
+  font-size: 1.4rem;
+}

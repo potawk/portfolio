@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.about{
+	scroll-margin-top: 90px;
+}
+
+.about__content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include m.tab{
+		display: block;
+	}
+}
+
+.about__img{
+	width: 30%;
+	margin-right: 4%;
+
+	@include m.tab{
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 32px;
+	}
+}
+
+.about__text{
+	width: 66%;
+
+	@include m.tab{
+		width: 100%;
+	}
+}
+
+.about__name{
+	font-weight: bold;
+	font-size: 2.4rem;
+	margin-bottom: 24px;
+	color: v.$text-color;
+}
+
+.about__name-j{
+	margin-bottom: 8px;
+}
+
+.about__description{
+	font-size: 1.6rem;
+	color: v.$text-color;
+	line-height: 1.75;
+}

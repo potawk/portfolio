@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+/* ハンバーガーメニューボタン(.hamburger-menu)のCSSを書いてください */
+.hamburger-menu {
+  display: none;
+
+	@include m.tab{
+		display: block;
+		width: 50px;
+		height: 35px;
+		position: relative;
+		top: 0;
+		right: 0;
+		z-index: 30;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+}
+/* ハンバーガーメニューボタンにカーソルを合わせた時のCSSを書いてください */
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+/* ハンバーガーメニューボタン内の3本線のCSSを書いてください */
+.hamburger-menu span {
+  width: 50px;
+  height: 5px;
+  background: v.$text-color;
+  position: absolute;
+  left: 0;
+	top: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* それぞれの線の位置を指定するCSSを書いてください */
+.hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 15px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビゲーションのCSSを書いてください */
+#hamburger-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: v.$text-color;
+  color: #fff;
+  z-index: 20;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* ナビゲーション内のセクションのCSSを書いてください */
+.sections {
+  list-style: none;
+  margin-top: 146px;
+}
+
+/* セクション内のリストのCSSを書いてください */
+.hamburger-menu-section {
+  margin-bottom: 56px;
+}
+
+/* セクション内の`a`タグのCSSを書いてください */
+a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 3.2rem;
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+#hamburger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+/* ナビゲーションが表示している時のボタンがXになるようCSSを書いてください */
+.hamburger-menu.active span:nth-child(1) {
+  top: 17.5px;
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+.hamburger-menu.active span:nth-child(2),
+.hamburger-menu.active span:nth-child(3) {
+  top: 17.5px;
+  transform: rotate(45deg);
+  background: #fff;
+}

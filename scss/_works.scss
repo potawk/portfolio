@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.works{
+	width: 100%;
+	margin-top: 90px;
+}
