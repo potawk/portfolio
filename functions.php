@@ -11,3 +11,10 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 
 // アイキャッチ画像を使用可能にする
 add_theme_support('post-thumbnails');
+
+// function wp_post_link( $link, $post ) {
+// 	$meta = get_post_meta( $post->ID, 'link_url', TRUE );
+// 	$url = esc_url( filter_var( $meta, FILTER_VALIDATE_URL ) );
+// 	return $url ? $url : $link;
+// }
+// add_filter( 'post_link', 'wp_post_link', 10, 2 );

@@ -7,7 +7,10 @@
 			<?php while (have_posts()): ?>
 				<?php the_post(); ?>
 				<li class="card__item">
-					<a href="" class="card__link">
+				<?php
+					$link = get_post_meta(get_the_ID(), 'link_url', true);
+				?>
+					<a href="<?php echo esc_url($link ? $link : get_permalink()); ?>" class="card__link" target="_blank" rel="noopener">
 						<?php if(has_post_thumbnail()): ?>
 						<div class="card__img">
 							<?php the_post_thumbnail(); ?>

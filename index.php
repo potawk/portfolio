@@ -12,6 +12,14 @@
 	<h2 class="section-title section-title-l"><span class="section-title__inner">WORKS</span></h2>
 	<ul class="card__list top__works-card-l">
 		<?php
+		// ACFで入力された外部リンクを取得
+		$external_link = get_field('external_link');
+
+		// 外部リンクが設定されていればそれを使い、なければ通常の投稿リンク
+		$link = $external_link ? $external_link : get_permalink();
+		?>
+
+		<?php
 		$works_query = new WP_Query(
 			array(
 				'post_type' => 'post',
@@ -24,7 +32,10 @@
 			<?php while ($works_query->have_posts()): ?>
 				<?php $works_query->the_post(); ?>
 				<li class="card__item">
-					<a href="" class="card__link">
+				<?php
+					$link = get_post_meta(get_the_ID(), 'link_url', true);
+				?>
+					<a href="<?php echo esc_url($link ? $link : get_permalink()); ?>" class="card__link" target="_blank" rel="noopener">
 						<?php if (has_post_thumbnail()): ?>
 							<div class="card__img">
 								<?php the_post_thumbnail(); ?>

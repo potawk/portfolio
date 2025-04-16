@@ -333,6 +333,7 @@ body {
   font-size: 2rem;
   background: #eeeeee;
   color: #333;
+  min-height: 320px;
 }
 
 .card__title {
