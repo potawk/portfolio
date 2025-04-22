@@ -47,6 +47,16 @@
 	margin-bottom: 8px;
 }
 
+.about__name-e span{
+	display: inline-block;
+
+	@include m.tab{
+		display: block;
+		margin-bottom: 8px;
+	}
+}
+
+
 .about__description{
 	font-size: 1.6rem;
 	color: v.$text-color;

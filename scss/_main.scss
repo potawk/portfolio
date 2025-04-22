@@ -19,7 +19,6 @@
 	font-size: 4.8rem;
 	font-weight: 900;
 	text-align: center;
-	min-width: 450px;
 
 	@include m.tab{
 		font-size: 4rem;
@@ -28,6 +27,11 @@
 
 .mainvisual__name{
 	margin-bottom: 40px;
+	min-width: 600px;
+
+	@include m.tab{
+		min-width: 0;
+	}
 }
 
 .mainvisual__name span{
@@ -37,10 +41,6 @@
 		display: block;
 		margin-bottom: 40px;
 	}
-}
-
-.mainvisual__portfolio{
-
 }
 
 .title-404{

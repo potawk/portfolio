@@ -25,37 +25,36 @@
 	}
 }
 
-.cf7-label{
+.wpcf7-form label{
 	font-size: 2rem;
-	margin-bottom: 30px;
 	color: v.$text-color;
-
-	@include m.tab{
-		margin-bottom: 16px;
-	}
 }
 
-.cf7-input{
+.wpcf7-text{
 	width: 100%;
 	height: 80px;
 	border: 3px solid v.$text-color;
-	margin-bottom: 80px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 
 	@include m.tab{
 		height: 72px;
-		margin-bottom: 40px;
 	}
 }
 
-.cf7-textarea{
+.wpcf7-not-valid-tip{
+	margin-bottom: 10px;
+}
+
+.wpcf7-textarea{
 	width: 100%;
 	height: 260px;
 	border: 3px solid v.$text-color;
-	margin-bottom: 80px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 
 	@include m.tab{
 		height: 480px;
-		margin-bottom: 40px;
 	}
 }
 

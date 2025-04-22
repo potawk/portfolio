@@ -78,7 +78,7 @@
 		<div class="about__text">
 			<div class="about__name">
 				<p class="about__name-j">坪内　孝</p>
-				<p class="about__name-e">TAKASHI TSUBOUCHI</p>
+				<p class="about__name-e"><span>TAKASHI&nbsp;</span><span>TSUBOUCHI</span></p>
 			</div>
 			<div class="about__description">
 				はじめまして、福岡市でWebコーダーとして活動しております。<br>

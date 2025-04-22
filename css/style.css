@@ -57,7 +57,7 @@ a {
 }
 
 .header__logo {
-  width: 147px;
+  min-width: 147px;
 }
 
 .header__items {
@@ -75,8 +75,15 @@ a {
 .header__item:not(:last-of-type) {
   margin-right: 40px;
 }
-.header__item a {
+
+.header__item-text {
   color: #333;
+  font-size: 3.2rem;
+}
+@media screen and (max-width: 1000px) {
+  .header__item-text {
+    font-size: 2.4rem;
+  }
 }
 
 .footer {
@@ -260,7 +267,6 @@ body {
   font-size: 4.8rem;
   font-weight: 900;
   text-align: center;
-  min-width: 450px;
 }
 @media screen and (max-width: 768px) {
   .mainvisual__text {
@@ -270,6 +276,12 @@ body {
 
 .mainvisual__name {
   margin-bottom: 40px;
+  min-width: 600px;
+}
+@media screen and (max-width: 768px) {
+  .mainvisual__name {
+    min-width: 0;
+  }
 }
 
 .mainvisual__name span {
@@ -440,6 +452,16 @@ ul.skill-list {
   margin-bottom: 8px;
 }
 
+.about__name-e span {
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .about__name-e span {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
 .about__description {
   font-size: 1.6rem;
   color: #333;
@@ -469,40 +491,38 @@ ul.skill-list {
   }
 }
 
-.cf7-label {
+.wpcf7-form label {
   font-size: 2rem;
-  margin-bottom: 30px;
   color: #333;
 }
-@media screen and (max-width: 768px) {
-  .cf7-label {
-    margin-bottom: 16px;
-  }
-}
 
-.cf7-input {
+.wpcf7-text {
   width: 100%;
   height: 80px;
   border: 3px solid #333;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
-  .cf7-input {
+  .wpcf7-text {
     height: 72px;
-    margin-bottom: 40px;
   }
 }
 
-.cf7-textarea {
+.wpcf7-not-valid-tip {
+  margin-bottom: 10px;
+}
+
+.wpcf7-textarea {
   width: 100%;
   height: 260px;
   border: 3px solid #333;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
-  .cf7-textarea {
+  .wpcf7-textarea {
     height: 480px;
-    margin-bottom: 40px;
   }
 }
 
@@ -669,14 +689,14 @@ ul.skill-list {
 
 /* セクション内のリストのCSSを書いてください */
 .hamburger-menu-section {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 /* セクション内の`a`タグのCSSを書いてください */
 a {
   color: #fff;
   font-weight: 900;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
 }
 
 /* ナビゲーションを表示するためのCSSを書いてください */

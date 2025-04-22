@@ -31,7 +31,7 @@
 }
 
 .header__logo {
-  width: 147px;
+  min-width: 147px;
 }
 
 .header__items {
@@ -49,8 +49,13 @@
   &:not(:last-of-type) {
     margin-right: 40px;
   }
+}
 
-  a{
-    color: v.$text-color;
+.header__item-text{
+  color: v.$text-color;
+  font-size: 3.2rem;
+
+  @include m.tab2{
+    font-size: 2.4rem;
   }
 }

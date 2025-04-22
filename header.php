@@ -21,10 +21,10 @@
 			</<?php echo $html_tag; ?>>
 			<nav>
 				<ul class="header__items">
-					<li class="header__item"><a href="<?php echo esc_url(home_url('/category/works/')); ?>">WORKS</a></li>
-					<li class="header__item"><a href="<?php echo esc_url(home_url('/')); ?>#about">ABOUT</a></li>
-					<li class="header__item"><a href="<?php echo esc_url(home_url('/')); ?>#services">SERVICES</a></li>
-					<li class="header__item"><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
+					<li class="header__item"><a href="<?php echo esc_url(home_url('/category/works/')); ?>" class="header__item-text">WORKS</a></li>
+					<li class="header__item"><a href="<?php echo esc_url(home_url('/')); ?>#about" class="header__item-text">ABOUT</a></li>
+					<li class="header__item"><a href="<?php echo esc_url(home_url('/')); ?>#services" class="header__item-text">SERVICES</a></li>
+					<li class="header__item"><a href="<?php echo esc_url(home_url('/contact/')); ?>" class="header__item-text">CONTACT</a></li>
 				</ul>
 			</nav>
 			<div class="hamburger-menu">
